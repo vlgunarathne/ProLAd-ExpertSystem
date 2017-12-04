@@ -10,6 +10,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.scene.layout.StackPane;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
@@ -42,12 +43,12 @@ public class PrologJavaFX extends Application {
         StackPane root = new StackPane();
         
         root.getChildren().add(browser);
-        //root.getChildren().add(btn);
+        
         
         Scene scene = new Scene(root, 960, 650);
-        
-        primaryStage.setTitle("Expert System");
-        primaryStage.setResizable(false);
+        primaryStage.getIcons().add(new Image(PrologJavaFX.class.getResourceAsStream( "iconImage.png" )));
+        primaryStage.setTitle("ProLAd - Expert System 1.0");
+        //primaryStage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
     }

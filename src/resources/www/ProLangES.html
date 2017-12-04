@@ -1,5 +1,8 @@
 <html lang="en">   
     <head>
+        <link rel="stylesheet" href="/bootstrap/css/bootstrap.css"/>
+        <link rel="shortcut icon" type="image/x-icon" href="/images/iconImage.png"/>
+        <script src="/bootstrap/js/jquery-2.0.3.min.js"></script>
         <script src="/vendor/jquery/jquery-2.0.3.min.js"></script>
         <script src="/pengine/pengines.js"></script>
         <script type="text/x-prolog">
@@ -526,15 +529,14 @@ ask(Question, Answer, Choices) :-
                     text-align: center;
                     text-decoration: none;
                     display: inline-block;
-                    font-size: 16px;
+                    font-size: 13px;
                     margin: 4px 2px;
                     cursor: pointer;
                     border-radius: 8%;
             }
             #result{
-                background-color: #E5E5E5;
-                border: 1px solid #E5E5E5;
-                border-radius: 5px 5px 5px 5px;
+                
+                
                 margin-left: 70px;
                 margin-right: 70px;
             }
@@ -546,7 +548,7 @@ ask(Question, Answer, Choices) :-
                     text-align: center;
                     text-decoration: none;
                     display: inline-block;
-                    font-size: 16px;
+                    font-size: 13px;
                     margin: 0px 0px;
                     cursor: pointer;
                     font-weight: bold;
@@ -555,28 +557,41 @@ ask(Question, Answer, Choices) :-
                     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
             }
             footer {
-                background: #aaa;
-                color:white;
+                
                 text-align: center;
                 margin-top: 20px;
                 padding: 20px;
-                border-radius: 15px;
+                
+            }
+            #grad1 {
+                height: 120px;
+                width:100%;
+                background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+                color:white;
+                opacity:0.95;
             }
         </style>
     </head>
     <body>
         <center style="margin-top:20px;">
-            <div><h1><u>Expert System</u></h1></div>
-            <div><h4>Programming Language Selector</h4></div><hr>
+            
+            <div id="grad1" style="text-align:center;margin:auto;color:#f3f3f3;font-size:30px;font-weight:550;padding-top:20px;">
+            Expert System
+            <h4>Programming Language Advisor</h4>
+            </div>
+                
+            
+            <hr>
             <div>
-            <p>
+            <p class="well" style="margin-left: 50px;margin-right: 50px;">
             Which programming language should I learn first?<br>
             'To answer, select the number relevant to the answer'
             </p>
             </div>
             <div id="msg"></div>
-            <div id="result"></div>
-            <button onclick="window.location.reload()">Reset</button>
+            <div id="result" class="well"></div>
+            
+            <button class="btn btn-danger" onclick="window.location.reload()">Reset</button>
            <!-- <button onclick="pengine.respond(0);resetData();">0</button>
             <button onclick="pengine.respond(1)">1</button>
             <button onclick="pengine.respond(2)">2</button>
@@ -586,6 +601,6 @@ ask(Question, Answer, Choices) :-
             <button id="next" onclick="pengine.next()" disabled>Next</button>
             -->
         </center>
-    <footer>Copyright &copy 2017; Viduranga Lahiru Gunarathne - Com.Sc/14/002</footer>
+    <footer class="well">Copyright &copy 2017; Viduranga Lahiru Gunarathne - Com.Sc/14/002</footer>
     </body>
 </html>
